@@ -1,0 +1,22 @@
+{
+  "name": "readme-generator",
+  "version": "1.0.0",
+  "description": "Node.js app for creating a README file",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stephenstuder/readme-generator.git"
+  },
+  "author": "Stephen Studer",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^6.5.0"
+  },
+  "bugs": {
+    "url": "https://github.com/stephenstuder/readme-generator/issues"
+  },
+  "homepage": "https://github.com/stephenstuder/readme-generator#readme"
+}
