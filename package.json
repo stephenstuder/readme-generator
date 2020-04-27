@@ -13,6 +13,7 @@
   "author": "Stephen Studer",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.19.2",
     "inquirer": "^6.5.0"
   },
   "bugs": {
