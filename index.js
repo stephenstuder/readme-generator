@@ -76,10 +76,7 @@ inquirer
       // handle success
       userReadMeData.avatar_url = response.data.avatar_url;
       userReadMeData.email = response.data.email;
-      console.log(userReadMeData);
-      const UserReadMe = 
-      `#${userReadMeData.title}\n#description\n${userReadMeData.description}
-      `;
+      const UserReadMe = `##${userReadMeData.title}\n\n#description\n${userReadMeData.description}\n\n#installation\n${userReadMeData.installation}\n\n#license\n${userReadMeData.license}\n\n#usage\n${userReadMeData.usage}\n\n#contributing\n${userReadMeData.contributing}\n\n#tests\n${userReadMeData.tests}\n\n#questions\n${userReadMeData.questions}\n\n#avatar_url\n${userReadMeData.avatar_url}\n\n#email\n${userReadMeData.email}`;
       fs.writeFile("README.md", UserReadMe, err => err ? console.log(err) : console.log("Success!"));
     })
     .catch((error) => {
