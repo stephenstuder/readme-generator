@@ -1,18 +1,33 @@
 const inquirer = require("inquirer");
-const axios = require("axios");
 const fs = require("fs");
+const axios = require("axios");
+
+function ReadMeObject(title, description, installation, license, usage, contributing, tests, questions, username, avatar_url, email) {
+  this.title = title,
+  this.description = description,
+  this.installation = installation, 
+  this.license = license,
+  this.usage = usage,
+  this.contributing = contributing,
+  this.tests = tests,
+  this.questions = questions,
+  this.username = username,
+  this.avatar_url = avatar_url,
+  this.email = email
+}
+
 
 inquirer
-  .prompt([
-    {
-      type: "input",
-      message: "Title of the project?",
-      name: "title"
-    },
-    {
-      type: "input",
-      message: "Description of the project",
-      name: "description"
+.prompt([
+  {
+    type: "input",
+    message: "Title of the project?",
+    name: "title"
+  },
+  {
+    type: "input",
+    message: "Description of the project",
+    name: "description"
     },
     {
       type: "input",
@@ -51,22 +66,28 @@ inquirer
     },
   ])
   .then(function(response) {
-      //Use github name to gather image and email
-        let readMeData = response;
-        const queryUrl = `https://api.github.com/users/${response.username}`;
-        axios
-        .get(queryUrl)
-        .then((response) => {
-          // handle success
-          const avatar_url = response.data.avatar_url;
-          const email = response.data.email;
-        })
-        .catch((error) => {
-          // handle error
-          console.log(error);
-        });
-        
-        //actually write to a file here that we create on the fly. 
-        //fs.writeFile("README.md", )
-
-      });
+    //Use github name to gather image and email
+    let userReadMeData = new ReadMeObject(response.title, response.description, response.description, response.installation, response.license, response.usage, response.contributing, response.contributing, response.tests, response.questions, response.username);    //actually write to a file here that we create on the fly. 
+    //fs.writeFile("README.md", )
+    const queryUrl = `https://api.github.com/users/${userReadMeData.username}`;
+    axios
+    .get(queryUrl)
+    .then((response) => {
+      // handle success
+      userReadMeData.avatar_url = response.data.avatar_url;
+      userReadMeData.email = response.data.email;
+      console.log(userReadMeData);
+      const UserReadMe = 
+      `#${userReadMeData.title}\n#description\n${userReadMeData.description}
+      `;
+      fs.writeFile("README.md", UserReadMe, err => err ? console.log(err) : console.log("Success!"));
+    })
+    .catch((error) => {
+      // handle error
+      console.log(error); 
+    });
+  })
+    .catch((error) => {
+      // handle error
+      console.log(error); 
+    });
