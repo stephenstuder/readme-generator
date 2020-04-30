@@ -80,11 +80,12 @@ inquirer
       fs.writeFile("README.md", UserReadMe, err => err ? console.log(err) : console.log("Success!"));
     })
     .catch((error) => {
-      // handle error
+      console.log("Whoops, looks like the github call failed")
       console.log(error); 
     });
   })
-    .catch((error) => {
+  .catch((error) => {
+    console.log("Whoops, looks like something failed")
       // handle error
       console.log(error); 
     });
