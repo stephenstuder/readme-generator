@@ -1,28 +1,28 @@
-# asdf
+# Readme Generator
 
 ## description
-asdf
+Node application that creates a readme
 
 ## installation
-asdf
+Just download and run the program and we take care of the rest
 
 ## license
-asdf
+None
 
 ## usage
-asdf
+Fair use
 
 ## contributing
-asdf
+Email me or send a pull request
 
 ## tests
-asdf
+None
 
 ## questions
-asdf
+None
 
 ## avatar_url
-https://avatars0.githubusercontent.com/u/2824143?v=4
+https://avatars3.githubusercontent.com/u/55567604?v=4
 
 ## email
 null

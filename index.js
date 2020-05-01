@@ -16,7 +16,7 @@ function ReadMeObject(title, description, installation, license, usage, contribu
   this.email = email
 }
 
-
+let userReadMeData;
 inquirer
 .prompt([
   {
@@ -67,15 +67,16 @@ inquirer
   ])
   .then(function(response) {
     //Use github name to gather image and email
-    let userReadMeData = new ReadMeObject(response.title, response.description, response.description, response.installation, response.license, response.usage, response.contributing, response.contributing, response.tests, response.questions, response.username);    //actually write to a file here that we create on the fly. 
+    userReadMeData = new ReadMeObject(response.title, response.description, response.installation, response.license, response.usage, response.contributing, response.tests, response.questions, response.username);
     //fs.writeFile("README.md", )
     const queryUrl = `https://api.github.com/users/${userReadMeData.username}`;
     axios
     .get(queryUrl)
     .then((response) => {
-      // handle success
+      console.log(userReadMeData);
       userReadMeData.avatar_url = response.data.avatar_url;
       userReadMeData.email = response.data.email;
+      // handle success
       const UserReadMe = `# ${userReadMeData.title}\n\n## description\n${userReadMeData.description}\n\n## installation\n${userReadMeData.installation}\n\n## license\n${userReadMeData.license}\n\n## usage\n${userReadMeData.usage}\n\n## contributing\n${userReadMeData.contributing}\n\n## tests\n${userReadMeData.tests}\n\n## questions\n${userReadMeData.questions}\n\n## avatar_url\n${userReadMeData.avatar_url}\n\n## email\n${userReadMeData.email}`;
       fs.writeFile("README.md", UserReadMe, err => err ? console.log(err) : console.log("Success!"));
     })
