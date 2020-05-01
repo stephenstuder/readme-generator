@@ -1,10 +1,10 @@
 # Readme Generator
 
 ## description
-Node application that creates a readme
+Node App that creates a readme
 
 ## installation
-Just download and run the program and we take care of the rest
+Just download and run using command ``` \n node index.js \n ```
 
 ## license
 None
@@ -13,16 +13,16 @@ None
 Fair use
 
 ## contributing
-Email me or send a pull request
+Feel free, just send a pull request
 
 ## tests
-None
+None currently
 
 ## questions
 None
 
 ## avatar_url
-https://avatars3.githubusercontent.com/u/55567604?v=4
+<img src="https://avatars3.githubusercontent.com/u/55567604?v=4" alt="user image" width="500"/>
 
 ## email
 null
