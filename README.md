@@ -1,22 +1,22 @@
 # Readme Generator
 
 ## description
-Node App that creates a readme
+Node CLI that generates a custom Readme file
 
 ## installation
-Just download and run using command ``` \n node index.js \n ```
+Download, run NPM install, then run index.js and fill out prompts
 
 ## license
-None
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 ## usage
-Fair use
+Fair Use
 
 ## contributing
-Feel free, just send a pull request
+Open, send a pull request
 
 ## tests
-None currently
+None currently 
 
 ## questions
 None
@@ -25,4 +25,4 @@ None
 <img src="https://avatars3.githubusercontent.com/u/55567604?v=4" alt="user image" width="500"/>
 
 ## email
-null
+Email address not publicly available
