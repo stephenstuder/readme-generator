@@ -1,27 +1,34 @@
-# Readme
+# Readme Generator
 
 ## description
-asdf
+Node CLI app that generator a custom readme file
 
 ## table of contents 
+ - [installation](#installation) 
+ - [license](#license) 
+ - [usage](#usage) 
+ - [contributing](#contributing) 
  - [tests](#tests) 
+ - [questions](#questions) 
+ - [author of the program](#author of the program) 
+ - [author email](#author email) 
  ## installation
-asdf
+Download the program, ```npm install```, thenrun ```node index.js```
 
 ## license
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 ## usage
-asd
+Fair use
 
 ## contributing
-asdf
+Open to contributions, send a pull request
 
 ## tests
-asdf
+None
 
 ## questions
-asdf
+None
 
 ## author of program
 <img src="https://avatars3.githubusercontent.com/u/55567604?v=4" alt="user image" width="500"/>
