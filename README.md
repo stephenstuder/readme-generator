@@ -1,7 +1,7 @@
 # Readme Generator
 
 ## description
-Node CLI that generates a custom readme file
+A node cli that generates a custom readme file
 
 ## table of contents 
  - [installation](#installation) 
@@ -13,19 +13,19 @@ Node CLI that generates a custom readme file
  - [author-of-the-program](#author-of-the-program) 
  - [author-email](#author-email) 
  ## installation
-Download this program, run ```npm install```, then run ```node index.js```
+Download the program, first run ```npm install```, then run ```node index.js```
 
 ## license
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 ## usage
-Fair use
+Fair Usage
 
 ## contributing
-Open for contribution, send a pull request
+Open for contribution, just send a pull request
 
 ## tests
-None
+No tests currently
 
 ## questions
 None

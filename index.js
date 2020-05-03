@@ -97,7 +97,6 @@ function init() {
                     //Changes the license to a badge
                     userReadMeData.license = generateLicense(userReadMeData.license);
                     const markdownData = generateMarkdown(userReadMeData);
-                    console.log(userReadMeData);
                     writeToFile("README.md", markdownData);
                 })
 
