@@ -98,8 +98,12 @@ function init() {
                     userReadMeData.license = generateLicense(userReadMeData.license);
                     const markdownData = generateMarkdown(userReadMeData);
                     writeToFile("README.md", markdownData);
+                }).catch((err) =>{
+                    console.log(err);
                 })
 
+        }).catch((err) =>{
+            console.log(err);
         })
 }
 
